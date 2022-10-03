@@ -3,7 +3,7 @@
         <img src="{{'https://image.tmdb.org/t/p/w500/'.$movie['poster_path'] }}"alt="poster" class="hover:opacity-75" style="width:15rem;height:20rem">
     </a>
     <div class="mt-2">
-        <a href="{{'https://image.tmdb.org/t/p/w500/'.$movie['poster_path'] }}" class="text-lg mt-2 hover:text-gray:300">{{$movie['title']}}</a>
+        <a href="{{route('movies.show',$movie['id'])}}" class="text-lg mt-2 hover:text-gray:300">{{$movie['title']}}</a>
         <div class="flex items-center text-gray-400 text-sm mt-1">
             <i class="fa-solid fa-star fa-xs fill-current text-orange-400"></i>
             <span class="ml-1">{{$movie['vote_average']* 10 .'%'}}</span>
